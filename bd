@@ -1,0 +1,28 @@
+CREATE DATABASE IF NOT EXISTS portal_empregos
+
+USE portal_empregos;
+
+CREATE TABLE IF NOT EXISTS vagas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(150) NOT NULL,
+  descricao TEXT NOT NULL,
+  empresa VARCHAR(100) NOT NULL,
+  localizacao VARCHAR(100) NOT NULL,
+  categoria VARCHAR(50) NOT NULL,
+  data_publicada TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  salario FLOAT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+INSERT INTO vaga (titulo, descricao, salario, localizacao, empresa, categoria)
+VALUES 
+('Desenvolvedor Front-End', 'Desenvolvimento de interfaces web usando React.', 4500.00, 'São Paulo - SP', 'TechWeb', 'TI'),
+('Engenheiro Civil', 'Responsável por obras de médio porte na cidade de Belo Horizonte.', 7800.00, 'Belo Horizonte - MG', 'Construtora Brasil', 'Engenharia'),
+('Analista de Marketing', 'Planejamento de campanhas digitais e análise de métricas.', 3500.00, 'Curitiba - PR', 'MarketTop', 'Marketing'),
+('Vendedor Externo', 'Atuação com vendas porta a porta e metas mensais.', 2500.00, 'Salvador - BA', 'Comercial BA', 'Vendas'),
+('Analista de Dados', 'Manipulação de grandes volumes de dados com SQL e Python.', 6500.00, 'São Paulo - SP', 'DataMind', 'TI'),
+('Assistente de RH', 'Suporte a processos seletivos, admissões e treinamentos.', 2800.00, 'Recife - PE', 'RH Brasil', 'Recursos Humanos'),
+('Desenvolvedor Back-End', 'Desenvolvimento de APIs REST com Node.js e Express.', 5800.00, 'Remoto', 'CodeFactory', 'TI'),
+('Engenheiro Mecânico', 'Manutenção de sistemas industriais e suporte técnico.', 7200.00, 'Joinville - SC', 'Indústria Sul', 'Engenharia'),
+('Consultor de Vendas', 'Relacionamento com clientes e atingimento de metas.', 3000.00, 'Porto Alegre - RS', 'Grupo Sul Vendas', 'Vendas'),
+('Designer Gráfico', 'Criação de peças digitais e identidade visual para redes sociais.', 3200.00, 'Fortaleza - CE', 'DesignPro', 'Marketing');
