@@ -1,0 +1,292 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.search-section {
+  text-align: center;
+
+}
+
+
+.botaoSidebar {
+  position: fixed;
+  top: 120px; /* espaço abaixo do header com padding */
+  left: 20px;
+  z-index: 1050;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.botaoSidebar:hover {
+  background-color: #0056b3;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.search-section input {
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-section button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-section {
+  text-align: center;
+
+}
+
+.category-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-buttons button:hover {
+  background-color: #ccc;
+}
+
+.job-listing {
+  margin: auto;
+  padding: 20px;
+}
+
+.vagas {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.vaga {
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #007bff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.vaga h3 {
+  margin-top: 0;
+}
+
+.vaga a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.vaga a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 15px;
+}
+
+.logo-container h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  animation: spin 3s linear infinite;
+  transition: transform 0.3s ease;
+  border-radius: 100%;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Botão deslizante */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 4px;
+  left: 4px;
+  transition: 0.4s;
+}
+
+.botaoSidebar {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botaoSidebar:hover {
+  background-color: #0056b3;
+  transform: scale(1.03);
+  text-decoration: none;
+  color: #fff;
+}
+
+.botaoSidebar i {
+  font-size: 1.2rem;
+}
+
+
+
+input:checked+.slider {
+  background-color: #4d4c4c;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+
+
+
+body.dark-mode header {
+  background-color: #111;
+  color: #fff;
+}
+
+body.dark-mode footer {
+  background-color: #111;
+  color: #ccc;
+}
+
+body.dark-mode .vaga {
+  background-color: #333;
+  color: #eee;
+}
+
+body.dark-mode .category-buttons button {
+  background-color: #444;
+  color: #eee;
+  border-color: #666;
+}
+
+body.dark-mode .job-listing {
+  background-color: #444;
+  color: #eee;
+  border-color: #666;
+}
+
+body.dark-mode .filter-section {
+  background-color: #444;
+  color: #eee;
+  border-color: #666;
+}
+
+body.dark-mode .search-section {
+  background-color: #444;
+  color: #eee;
+  border-color: #666;
+}
+body.dark-mode .botaoSidebar {
+  background-color: #2f60bd;
+  color: #eee;
+  border-color: #666;
+}
+
+
+
